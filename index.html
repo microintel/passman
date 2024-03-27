@@ -1,1 +1,58 @@
-nk
+<html>
+    <title>passman</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: black;
+                color: aliceblue;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                background-image: url("https://raw.githubusercontent.com/nikhil2005858/microdisk/main/i1.jpg");
+                background-repeat: no-repeat;
+                background-size:cover;
+            
+            }
+            div{
+            
+            box-shadow:3px 3px 20px black;
+            
+            }
+        </style>
+        <body>
+            <h6 style="margin:0px;">MICRO</h6>
+            <h1 style="margin:0px;">PASSMAN</h1>
+            <center><div style="margin-top: 10%; padding: 8%;backdrop-filter: blur(10px); width:fit-content; height:fit-content; border-radius: 20px;">
+                <h3 style="margin-top: 0PX;">Password-convertor</h3>
+               <input id="a2" style="border-radius: 30px; border: hidden; margin-top: 2%;" type="text"  placeholder="enter the password"> 
+        <button style="background-color: aliceblue; color: black; border: hidden; border-radius: 30px;margin-top: 2%;" onclick="myhash()">GENRATE</button>
+        <P></P>
+        <P></P>
+     <p id="a1" style="margin-top: 50PX;">password  will appear here! </p></div></center>
+        <script>
+        
+            function myhash(){
+            
+                var q=document.getElementById("a2").value;
+                if(q.length<8){
+                alert("\nplease enter minimum 8 characters\n for robust security!..");
+                }
+                else{
+               var a=" ~!@#$%^&*()_+{}:|<>?`1234567890-=,[].qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+               var b="MNBVCXZLKJHGFDSAPOIUYTREWQmnbvcxzlkjhgfdsapoiuytrewq.][,=-0987654321`?><|:{}+_)(*&^%$#@!~" ;
+               var fi=""
+               for(i=0;i<=q.length-1;i++)
+{
+            var h=a.indexOf(q[i])
+            var fi=fi+b[h]
+}
+document.getElementById("a1").innerHTML=fi;
+       }
+            }
+        </script>
+        <h6 style="color:gold;margin-top:91%;margin-bottom:0px;">Developed By</h6>
+        <h2 style="margin:0px;">Microintel</h2>
+        
+        </body>
+    </head>
+</html>
